@@ -2,7 +2,7 @@
 <html lang="nl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 <title>Eyes (closed)</title>
 <style>
   @font-face {
@@ -22,17 +22,18 @@
     background: #ffffff;
     color: #111111;
     font-family: "AnkaCoder", monospace;
-    height: 100vh;
+    height: 100dvh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    padding: 3vh 5vw;
+    padding: 2.5vh 5vw;
     text-align: center;
+    gap: 1.5vh;
   }
   .title {
-    font-size: clamp(0.9rem, 2.2vw, 1.6rem);
-    align-self: flex-start;
+    font-size: clamp(0.85rem, 2.2vw, 1.6rem);
+    flex-shrink: 0;
   }
   .image-wrap {
     flex: 1;
@@ -49,10 +50,22 @@
     height: auto;
     object-fit: contain;
     display: block;
+    margin: 0 auto;
   }
   .caption {
-    font-size: clamp(0.9rem, 2.2vw, 1.6rem);
-    align-self: flex-end;
+    font-size: clamp(0.85rem, 2.2vw, 1.6rem);
+    flex-shrink: 0;
+  }
+
+  /* Mobiel: iets kleinere tekst en marges, zodat alles gegarandeerd past */
+  @media (max-width: 600px) {
+    body {
+      padding: 2vh 4vw;
+      gap: 1vh;
+    }
+    .title, .caption {
+      font-size: clamp(0.75rem, 4vw, 1rem);
+    }
   }
 </style>
 </head>
@@ -61,7 +74,7 @@
   <div class="title">Eyes (closed)</div>
 
   <div class="image-wrap">
-    <img src="withotifotoart.png" alt="with Hoti">
+    <img src="withotifotoart.png" alt="Eyes closed">
   </div>
 
   <div class="caption">(for) better experience.</div>
