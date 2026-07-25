@@ -5,63 +5,54 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Eyes (closed)</title>
 <style>
-
   @font-face {
     font-family: "AnkaCoder";
     src: url("AnkaCoder-r.ttf") format("truetype");
   }
-
   * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
-
+  html, body {
+    height: 100%;
+    overflow: hidden;
+  }
   body {
     background: #ffffff;
     color: #111111;
     font-family: "AnkaCoder", monospace;
-    min-height: 100vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    padding: 60px 20px;
+    justify-content: space-between;
+    padding: 3vh 5vw;
     text-align: center;
   }
-
   .title {
-    font-size: 2rem;
-    margin-bottom: 40px;
+    font-size: clamp(1rem, 3vw, 2rem);
     align-self: flex-start;
-    margin-left: 10%;
   }
-
   .image-wrap {
-    max-width: 900px;
+    flex: 1;
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 0;
   }
-
   .image-wrap img {
-    width: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
     height: auto;
+    object-fit: contain;
     display: block;
   }
-
   .caption {
-    font-size: 1.6rem;
-    margin-top: 40px;
+    font-size: clamp(0.9rem, 2.2vw, 1.6rem);
     align-self: flex-end;
-    margin-right: 10%;
-  }
-
-  @media (max-width: 700px) {
-    .title, .caption {
-      align-self: center;
-      margin-left: 0;
-      margin-right: 0;
-      font-size: 1.3rem;
-    }
   }
 </style>
 </head>
@@ -70,7 +61,7 @@
   <div class="title">Eyes (closed)</div>
 
   <div class="image-wrap">
-    <img src="foto.png" alt="Eyes closed">
+    <img src="with_hoti_art_oostende_belgium_eyes_closed_thats_how_you_feel.png" alt="Eyes closed">
   </div>
 
   <div class="caption">(for) better experience.</div>
